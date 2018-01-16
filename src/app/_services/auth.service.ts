@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, RequestOptions, Headers, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -19,11 +21,11 @@ export class AuthService {
                 localStorage.setItem('token', user.tokenString);
                 this.userToken = user.tokenString;
             }
-        });
+        }).catch(this.handleError);
     }
 
     register(model: any) {
-        return this._http.post(this.baseUrl + 'register', model, this.requestOptions());
+        return this._http.post(this.baseUrl + 'register', model, this.requestOptions()).catch(this.handleError);
     }
 
     private requestOptions() {
