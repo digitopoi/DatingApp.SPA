@@ -2,7 +2,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BsDropdownModule } from 'ngx-bootstrap';
+import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 
@@ -23,9 +23,6 @@ import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
 import { UserService } from './_services/user.service';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +42,8 @@ import { UserService } from './_services/user.service';
     FormsModule,
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
-    AuthModule
+    AuthModule,
+    TabsModule.forRoot()
   ],
   providers: [
     AuthService,
