@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
-
+import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
@@ -15,6 +15,7 @@ import { MemberListComponent } from './members/member-list/member-list.component
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
+import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 
 import { AuthService } from './_services/auth.service';
 import { AlertifyService } from './_services/alertify.service';
@@ -35,7 +36,8 @@ import { UserService } from './_services/user.service';
     MemberListComponent,
     ListsComponent,
     MessagesComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberDetailComponent
 ],
   imports: [
     BrowserModule,
@@ -43,6 +45,7 @@ import { UserService } from './_services/user.service';
     FormsModule,
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
+    AuthModule
   ],
   providers: [
     AuthService,
