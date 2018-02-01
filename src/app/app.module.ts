@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
@@ -45,7 +46,8 @@ import { MemberListResolver } from './_resolvers/member-list.resolver';
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     AuthModule,
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    NgxGalleryModule
   ],
   providers: [
     AuthService,
