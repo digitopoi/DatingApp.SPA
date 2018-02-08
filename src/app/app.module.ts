@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { NgxGalleryModule } from 'ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker/bs-datepicker.module';
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
@@ -56,7 +57,8 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
     TabsModule.forRoot(),
     NgxGalleryModule,
     FileUploadModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [
     AuthService,
