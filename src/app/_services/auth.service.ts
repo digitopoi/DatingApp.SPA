@@ -40,8 +40,8 @@ export class AuthService {
         }).catch(this.handleError);
     }
 
-    register(model: any) {
-        return this._http.post(this.baseUrl + 'register', model, this.requestOptions()).catch(this.handleError);
+    register(user: User) {
+        return this._http.post(this.baseUrl + 'register', user, this.requestOptions()).catch(this.handleError);
     }
 
     loggedIn() {
