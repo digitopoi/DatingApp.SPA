@@ -1,6 +1,7 @@
 import { JwtHelper } from 'angular2-jwt';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './_services/auth.service';
+import { User } from './_models/User';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +12,19 @@ export class AppComponent implements OnInit {
   title = 'app';
   jwtHelper: JwtHelper = new JwtHelper();
 
-  constructor(private _authService: AuthService) {
+  constructor(public authService: AuthService) {
 
   }
 
   ngOnInit() {
     const token = localStorage.getItem('token');
-    if(token) {
-      this._authService.decodedToken = this.jwtHelper.decodeToken(token);
+    const user: User = JSON.parse(localStorage.getItem('user'));
+
+    if (token) {
+      this.authService.decodedToken = this.jwtHelper.decodeToken(token);
+    }
+    if (user) {
+      this.authService.currentUser = user;
     }
   }
 }
