@@ -5,8 +5,9 @@ export interface Message {
     senderPhotoUrl: string;
     recipientId: number;
     recipientKnownAs: string;
+    recipientPhotoUrl: string;
     content: string;
     isRead: boolean;
     dateRead: Date;
-    messageSent: Date;
+    dateSent: Date;
 }
