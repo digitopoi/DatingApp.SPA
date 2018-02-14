@@ -111,6 +111,11 @@ export class UserService {
             }).catch(this.handleError);
     }
 
+    deleteMessage(id: number, userId: number) {
+        return this.authHttp
+            .post(this.baseUrl + 'users/' + userId + '/messages/' + id, {}).catch(this.handleError);
+    }
+
     private handleError(error: any) {
         if (error.status === 400) {
             return Observable.throw(error._body);
