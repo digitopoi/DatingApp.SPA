@@ -1,27 +1,44 @@
-# DatingApp.SPA
+# DatingApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
+The world doesn't need another dating app - this is mainly a project to experiment with data relationships in Entity Framework Core.
 
-## Development server
+Has a messaging system and "like" functionality between users. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Frameworks and Libraries Used
 
-## Code scaffolding
+[ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Angular 5](https://angular.io)
 
-## Build
+[Angular Material 5](https://material.angular.io/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+[JSONGenerator - for seed data](https://www.json-generator.com/)
 
-## Running unit tests
+[ng2-file-upload](https://github.com/valor-software/ng2-file-upload)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+[ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/)
 
-## Running end-to-end tests
+[Time Ago Pipe](https://www.npmjs.com/package/time-ago-pipe)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Features
 
-## Further help
+## Matches - Filtering and Sorting
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![Matches](https://i.imgur.com/O7T9USQ.png)
+
+## Liking
+
+![Liking](https://i.imgur.com/7MFxWgm.png)
+
+## Bulk Photo Upload
+
+![Photo](https://i.imgur.com/VM6SqZf.png)
+
+## Messaging 
+
+![Messaging](https://i.imgur.com/A0H2jnS.png)
+
+## Mailbox
+
+![Mailbox](https://i.imgur.com/GyJVpfH.png)
+
