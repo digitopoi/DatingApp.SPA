@@ -1,5 +1,7 @@
 # DatingApp
 
+[Deployed on Azure](datingapp20180215105139.azurewebsites.net/)
+
 The world doesn't need another dating app - this is mainly a project to experiment with data relationships in Entity Framework Core.
 
 Has a messaging system and "like" functionality between users. 
